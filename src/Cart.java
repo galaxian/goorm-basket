@@ -12,4 +12,13 @@ public class Cart {
 		return cartMap.getOrDefault(key, 0);
 	}
 
+	public void removeProduct(Product product, int count) {
+		int productCnt = getKeyCount(product.getName());
+		if ((productCnt - count) <= 0) {
+			cartMap.remove(product.getName());
+		} else {
+			cartMap.put(product.getName(), productCnt - count);
+		}
+	}
+
 }
