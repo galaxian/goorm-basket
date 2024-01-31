@@ -19,5 +19,13 @@ public class CartApp {
 			System.out.println(product.getName()+ " " + product.getPrice());
 		}
 
+		Cart myCart = new Cart();
+		myCart.addProduct(product1, 2);
+		myCart.addProduct(product2, 10);
+		myCart.removeProduct(product1, 2);
+		myCart.removeProduct(product2, 5);
+		myCart.addProduct(product3,2);
+		myCart.addProduct(product3, 3);
+		myCart.showItems();
 	}
 }
