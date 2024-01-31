@@ -21,4 +21,10 @@ public class Cart {
 		}
 	}
 
+	public void showItems() {
+		for (String key : cartMap.keySet()) {
+			System.out.println("상품명 = " + key + " ," + "상품수량 = " + cartMap.get(key));
+		}
+	}
+
 }
